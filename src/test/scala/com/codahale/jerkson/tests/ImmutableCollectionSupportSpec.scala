@@ -1,6 +1,6 @@
 package com.codahale.jerkson.tests
 
-import com.codahale.simplespec.Spec
+import com.simple.simplespec.Spec
 import com.codahale.jerkson.Json._
 import scala.collection.immutable._
 import com.codahale.jerkson.ParsingException
@@ -62,7 +62,7 @@ class ImmutableCollectionSupportSpec extends Spec {
      * support for Ordered and Comparable classes. Once we have the Ordering,
      * we can pass it in manually to a builder.
      */
-    
+
     @Ignore @Test def `is parsable from a JSON array of ints` = {
       parse[TreeSet[Int]]("[1,2,3]").must(be(TreeSet(1, 2, 3)))
     }
@@ -113,7 +113,7 @@ class ImmutableCollectionSupportSpec extends Spec {
      * support for Ordered and Comparable classes. Once we have the Ordering,
      * we can pass it in manually to a builder.
      */
-    
+
     @Ignore @Test def `is parsable from a JSON object with int field values` = {
       parse[TreeMap[String, Int]]("""{"one":1}""").must(be(TreeMap("one" -> 1)))
     }

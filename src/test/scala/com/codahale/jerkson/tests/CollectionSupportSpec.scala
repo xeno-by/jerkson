@@ -2,7 +2,7 @@ package com.codahale.jerkson.tests
 
 import scala.collection._
 import com.codahale.jerkson.Json._
-import com.codahale.simplespec.Spec
+import com.simple.simplespec.Spec
 import org.junit.{Ignore, Test}
 
 class CollectionSupportSpec extends Spec {
@@ -141,7 +141,7 @@ class CollectionSupportSpec extends Spec {
      * support for Ordered and Comparable classes. Once we have the Ordering,
      * we can pass it in manually to a builder.
      */
-    
+
     @Ignore @Test def `is parsable from a JSON object with int field values` = {
       parse[SortedMap[String, Int]]("""{"one":1,"two":2}""").must(be(SortedMap("one" -> 1, "two" -> 2)))
     }
